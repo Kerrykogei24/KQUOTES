@@ -6,8 +6,8 @@ export class Quote {
     state:string;
     user:string;
     day:Date;
-    // upVote:number;
-    // downVote:number;
+    likes:number;
+    unlikes:number;
 
     constructor(id:number, author:string, state:string,user:string, day:Date){
         this.id=id;
@@ -15,7 +15,7 @@ export class Quote {
         this.state=state;
         this.user= user;
         this.day=day;
-        // this.upVote=0;
-        // this.downVote=0;
+        this.likes=0;
+        this.unlikes=0;
     }
 }

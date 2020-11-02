@@ -18,6 +18,13 @@ export class QuotesComponent implements OnInit {
     new Quote(6,'Theodore Bagwell','We are captives of our own identities, living in prisons of our own creation.', ' Kerry Komar' ,new Date(2020,11,4))
   ];
 
+  likes(index) {
+    this.quotes[index].likes++;
+  }
+  unlikes(index) {
+    this.quotes[index].unlikes++;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
