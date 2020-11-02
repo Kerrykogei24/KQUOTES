@@ -1,1 +1,8 @@
-<h4>THE KQOUTES</h4>
+<div>
+    <h1>KQOUTES</h1>
+    <ul>
+        <li *ngFor='let qoute of quotes'>
+            {{qoute.id}} {{qoute.author}} {{qoute.state}}{{qoute.user}}
+        </li>
+    </ul>
+</div>
