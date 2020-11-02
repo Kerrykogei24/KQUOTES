@@ -1,4 +1,6 @@
+// import { Quotes } from './quotes';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kQuotes';
+  quotes:string[];
+
+ constructor(){
+  this.quotes=['anyday above ground is a blessing', 'jokers day out'];
+ }
 }
+
