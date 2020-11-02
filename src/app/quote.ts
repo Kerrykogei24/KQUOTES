@@ -8,7 +8,7 @@ export class Quote {
     // upVote:number;
     // downVote:number;
 
-    constructor(id:number, author:string, state:string,user:string,upVote:number, downVote:number,){
+    constructor(id:number, author:string, state:string,user:string){
         this.id=id;
         this.author=author;
         this.state=state;
