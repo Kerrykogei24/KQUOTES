@@ -41,6 +41,30 @@ export class QuotesComponent implements OnInit {
     quote.user = quote.user;
     this.quotes.push(quote)
   }
+
+
+  best: number;
+  author: string;
+  user: string;
+  quote: string;
+  worst: number;
+  postedon: any;
+
+  bestQuote() {
+    this.best = 0;
+
+    for (let i = 0; i < this.quotes.length; i++) {
+      if (this.quotes[i].likes > this.best) {
+        this.best = this.quotes[i].likes;
+        this.author = this.quotes[i].author;
+        this.user = this.quotes[i].user;
+        this.quote = this.quotes[i].state;
+        this. worst = this.quotes[i].unlikes;
+        this.postedon = this.quotes[i].day;
+
+      }
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
