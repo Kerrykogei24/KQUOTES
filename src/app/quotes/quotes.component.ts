@@ -24,6 +24,17 @@ export class QuotesComponent implements OnInit {
   unlikes(index) {
     this.quotes[index].unlikes++;
   }
+  isComplete=true;
+
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].state}?`)
+
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
+    }
+  }
 
   constructor() { }
 

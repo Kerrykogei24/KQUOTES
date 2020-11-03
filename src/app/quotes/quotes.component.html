@@ -11,14 +11,14 @@
                     <div class="buttons">
                         <div class="row">
                             <div class="col-md-4">
-                                <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKES {{qoute.likes}}</button>
+                                <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKE {{qoute.likes}}</button>
                             </div>
 
                             <div class="col-md-4">
-                                <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKES {{qoute.unlikes}}</button>
+                                <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKE {{qoute.unlikes}}</button>
                             </div>
                             <div class="col-md-4">
-                                <button class="btn btn-outline-danger" (click)=' likes(i)'>LIKES {{qoute.likes}}</button>
+                                <button class="btn btn-outline-danger" (click)='deleteQuote($event,i)'>DEL</button>
 
                             </div>
                         </div>
