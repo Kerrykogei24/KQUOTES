@@ -35,7 +35,12 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
-
+  addNewQuote(quote) {
+    quote.author = quote.author;
+    quote.state = quote.state;
+    quote.user = quote.user;
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit(): void {
