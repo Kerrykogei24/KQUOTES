@@ -1,29 +1,32 @@
 <div class="container-fluid">
-    <h1>KQOUTES</h1>
-    <div class="row">
-        <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
-
-            <p>{{qoute.id}} {{qoute.author}} {{qoute.state}} {{qoute.user}} {{qoute.day}}</p>
-
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
     <div class="row">
         <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
             <div class="card text-center">
                 <div class="card-header">
-                    {{qoute.author}}
+                    {{qoute.id}}. {{qoute.author}}
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">POSTED BY: {{qoute.user}}</h5>
                     <p class="card-text"> {{qoute.state}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                <div class="card-footer text-muted">
-                    2 days ago
+                    <div class="buttons">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKES {{qoute.likes}}</button>
+                            </div>
+
+                            <div class="col-md-4">
+                                <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKES {{qoute.unlikes}}</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-outline-danger" (click)=' likes(i)'>LIKES {{qoute.likes}}</button>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-footer text-muted">
+                            {{qoute.day}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
