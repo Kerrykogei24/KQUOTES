@@ -32,8 +32,33 @@
             </div>
         </div>
     </div>
-    <app-quote-form (addquote)="addNewQuote($event)"></app-quote-form>
-    <div>
-        <button type="button" class="btn btn-outline-warning" (click)="bestQuote()">Favorite Quote</button>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="jumbotron">
+                <app-quote-form (addquote)="addNewQuote($event)" style="text-align: center;"></app-quote-form>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <button type="button" class="btn btn-outline-warning" (click)="bestQuote()">Favorite Quote</button>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">
+                    {{author}}
+                </div>
+                <div class="card-body" *ngIf='quote'>
+                    <h5 class="card-title">POSTED BY: {{user}} </h5>
+                    <p class="card-text">{{quote}}</p>
+                    <span class="btn btn-primary">{{best}}</span>
+                    <span class="btn btn-primary">{{worst}}</span>
+                </div>
+                <div class="card-footer text-muted">
+                    {{postedon }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
