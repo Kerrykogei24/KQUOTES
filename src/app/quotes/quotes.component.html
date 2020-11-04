@@ -23,8 +23,10 @@
     <div id="posts">
         <h1>KQOUTES</h1>
         <p>Are you looking for a quote of the week to brighten up your day and your week? Here you can find a list of positive quotes to help you get through a tough week!</p>
+
         <div class="row">
             <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
+
                 <div class="card text-center">
                     <div class="card-header">
                         {{qoute.id}}. {{qoute.author}}
@@ -53,6 +55,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -67,7 +70,7 @@
 
             <div class="col-md-4">
                 <div>
-                    <button type="button" class="btn btn-outline-warning" (click)="bestQuote()">Favorite Quote</button>
+                    <button type="button" class="btn btn-warning" (click)="bestQuote()">Favorite Quote</button>
                 </div>
 
                 <div class="card text-center">

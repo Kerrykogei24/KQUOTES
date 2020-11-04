@@ -9,7 +9,8 @@ h1 {
     color: gold;
 }
 
-.home {
+.home,
+#take {
     background-image: url("src/assets/quote2.jpeg");
     height: 100vh;
     background-size: cover;
