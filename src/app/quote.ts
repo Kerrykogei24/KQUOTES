@@ -1,4 +1,4 @@
-import { state } from '@angular/animations';
+
 
 export class Quote {
     id:number;
