@@ -52,8 +52,17 @@
                 <div class="card-body" *ngIf='quote'>
                     <h5 class="card-title">POSTED BY: {{user}} </h5>
                     <p class="card-text">{{quote}}</p>
-                    <span class="btn btn-primary">{{best}}</span>
-                    <span class="btn btn-primary">{{worst}}</span>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <span class="btn btn-outline-warning">LIKES {{best}}</span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <span class="btn btn-outline-secondary">UNLIKES {{worst}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
                 <div class="card-footer text-muted">
                     {{postedon }}
