@@ -1,6 +1,7 @@
 .jumbotron {
-    background: rgba(19, 15, 32, 1);
+    background: rgba(19, 15, 32, 0.9);
     color: #fff;
+    margin-top: 50px;
 }
 
 .home h1 {
@@ -45,8 +46,6 @@ h2 {
     color: sandybrown;
 }
 
-
-/* 
-.card-footer {
-    background-color: #0F4461;
-} */
+.joker {
+    margin-top: 80px;
+}
