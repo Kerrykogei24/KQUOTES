@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link active" href="#home">HOME<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#posts">BLOG</a>
+                    <a class="nav-item nav-link" href="#posts">RECENT QUOTES</a>
                     <a class="nav-item nav-link" href="#take">SHARE QUOTES</a>
 
                 </div>
@@ -19,85 +19,113 @@
 
         <h1>KQUOTES</h1>
     </div>
-</div>
 
 
 
-<div id="posts">
-    <h1>KQOUTES</h1>
-    <p>Are you looking for a quote of the week to brighten up your day and your week? Here you can find a list of positive quotes to help you get through a tough week!</p>
 
-    <div class="row">
-        <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
+    <div id="posts">
+        <h1>KQOUTES</h1>
+        <p>Are you looking for a quote of the week to brighten up your day and your week? Here you can find a list of positive quotes to help you get through a tough week!</p>
 
-            <div class="card text-center">
-                <div class="card-header">
-                    {{qoute.id}}. {{qoute.author}}
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">POSTED BY: {{qoute.user}}</h5>
-                    <p class="card-text"> {{qoute.state}}</p>
-                    <div class="buttons">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKE {{qoute.likes}}</button>
+        <div class="row">
+            <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
+
+                <div class="card text-center">
+                    <div class="card-header">
+                        {{qoute.id}}. {{qoute.author}}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">POSTED BY: {{qoute.user}}</h5>
+                        <p class="card-text"> {{qoute.state}}</p>
+                        <div class="buttons">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKE {{qoute.likes}}</button>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKE {{qoute.unlikes}}</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-outline-danger" (click)='deleteQuote($event,i)'>DEL</button>
+
+                                </div>
                             </div>
-
-                            <div class="col-md-4">
-                                <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKE {{qoute.unlikes}}</button>
+                            <br>
+                            <div class="card-footer text-muted">
+                                {{qoute.day|dateCount}} DAYS AGO
                             </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-outline-danger" (click)='deleteQuote($event,i)'>DEL</button>
-
-                            </div>
-                        </div>
-                        <br>
-                        <div class="card-footer text-muted">
-                            {{qoute.day|dateCount}} DAYS AGO
                         </div>
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="take">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+
+                    <app-quote-form (addquote)="addNewQuote($event)" style="text-align: center;"></app-quote-form>
+
+                </div>
             </div>
 
+            <div class="col-md-4">
+                <div>
+                    <button type="button" class="btn btn-warning" (click)="bestQuote()">Favorite Quote</button>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card-header">
+                        {{author}}
+                    </div>
+                    <div class="card-body" *ngIf='quote'>
+                        <h5 class="card-title">POSTED BY: {{user}} </h5>
+                        <p class="card-text">{{quote}}</p>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <span class="btn btn-outline-warning">LIKES {{best}}</span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <span class="btn btn-outline-secondary">UNLIKES {{worst}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{postedon|dateCount}} DAYS AGO
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div id="take">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="jumbotron">
 
-                <app-quote-form (addquote)="addNewQuote($event)" style="text-align: center;"></app-quote-form>
-
-            </div>
-        </div>
-
+    <h3 class="text-center">Contact</h3>
+    <p class="text-center"><em>We love our fans!</em></p>
+    <div class="row test">
         <div class="col-md-4">
-            <div>
-                <button type="button" class="btn btn-warning" (click)="bestQuote()">Favorite Quote</button>
+            <p>Fan? Drop a note.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Nairobi, Kenya</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone:0723424164</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: kerrykomar@gmail.com</p>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
             </div>
-
-            <div class="card text-center">
-                <div class="card-header">
-                    {{author}}
-                </div>
-                <div class="card-body" *ngIf='quote'>
-                    <h5 class="card-title">POSTED BY: {{user}} </h5>
-                    <p class="card-text">{{quote}}</p>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4">
-                            <span class="btn btn-outline-warning">LIKES {{best}}</span>
-                        </div>
-
-                        <div class="col-md-4">
-                            <span class="btn btn-outline-secondary">UNLIKES {{worst}}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="card-footer text-muted">
-                    {{postedon|dateCount}} DAYS AGO
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button class="btn pull-right" type="submit">Send</button>
                 </div>
             </div>
         </div>
