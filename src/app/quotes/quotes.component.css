@@ -26,9 +26,27 @@
 
 #posts {
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-h1 {
+h2 {
     font-family: lekam;
     text-align: center;
+    color: sandybrown;
 }
+
+#posts p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.card-header {
+    background-color: #092C4E;
+    color: sandybrown;
+}
+
+
+/* 
+.card-footer {
+    background-color: #0F4461;
+} */
