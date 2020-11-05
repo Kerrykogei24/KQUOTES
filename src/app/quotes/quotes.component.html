@@ -19,82 +19,85 @@
 
         <h1>KQUOTES</h1>
     </div>
+</div>
 
-    <div id="posts">
-        <h1>KQOUTES</h1>
-        <p>Are you looking for a quote of the week to brighten up your day and your week? Here you can find a list of positive quotes to help you get through a tough week!</p>
 
-        <div class="row">
-            <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
 
-                <div class="card text-center">
-                    <div class="card-header">
-                        {{qoute.id}}. {{qoute.author}}
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">POSTED BY: {{qoute.user}}</h5>
-                        <p class="card-text"> {{qoute.state}}</p>
-                        <div class="buttons">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKE {{qoute.likes}}</button>
-                                </div>
+<div id="posts">
+    <h1>KQOUTES</h1>
+    <p>Are you looking for a quote of the week to brighten up your day and your week? Here you can find a list of positive quotes to help you get through a tough week!</p>
 
-                                <div class="col-md-4">
-                                    <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKE {{qoute.unlikes}}</button>
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-outline-danger" (click)='deleteQuote($event,i)'>DEL</button>
+    <div class="row">
+        <div class="col-md-4" *ngFor='let qoute of quotes; let i = index'>
 
-                                </div>
+            <div class="card text-center">
+                <div class="card-header">
+                    {{qoute.id}}. {{qoute.author}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">POSTED BY: {{qoute.user}}</h5>
+                    <p class="card-text"> {{qoute.state}}</p>
+                    <div class="buttons">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn btn-outline-warning" (click)=' likes(i)'>LIKE {{qoute.likes}}</button>
                             </div>
-                            <br>
-                            <div class="card-footer text-muted">
-                                {{qoute.day|dateCount}} DAYS AGO
+
+                            <div class="col-md-4">
+                                <button class="btn btn-outline-secondary" (click)=' unlikes(i)'>UNLIKE {{qoute.unlikes}}</button>
                             </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-outline-danger" (click)='deleteQuote($event,i)'>DEL</button>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-footer text-muted">
+                            {{qoute.day|dateCount}} DAYS AGO
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="take">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="jumbotron">
+
+                <app-quote-form (addquote)="addNewQuote($event)" style="text-align: center;"></app-quote-form>
 
             </div>
         </div>
-    </div>
-    <div id="take">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="jumbotron">
-                    <app-quote-form (addquote)="addNewQuote($event)" style="text-align: center;"></app-quote-form>
 
-                </div>
+        <div class="col-md-4">
+            <div>
+                <button type="button" class="btn btn-warning" (click)="bestQuote()">Favorite Quote</button>
             </div>
 
-            <div class="col-md-4">
-                <div>
-                    <button type="button" class="btn btn-warning" (click)="bestQuote()">Favorite Quote</button>
+            <div class="card text-center">
+                <div class="card-header">
+                    {{author}}
                 </div>
-
-                <div class="card text-center">
-                    <div class="card-header">
-                        {{author}}
-                    </div>
-                    <div class="card-body" *ngIf='quote'>
-                        <h5 class="card-title">POSTED BY: {{user}} </h5>
-                        <p class="card-text">{{quote}}</p>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4">
-                                <span class="btn btn-outline-warning">LIKES {{best}}</span>
-                            </div>
-
-                            <div class="col-md-4">
-                                <span class="btn btn-outline-secondary">UNLIKES {{worst}}</span>
-                            </div>
-                        </div>
+                <div class="card-body" *ngIf='quote'>
+                    <h5 class="card-title">POSTED BY: {{user}} </h5>
+                    <p class="card-text">{{quote}}</p>
+                    <div class="row">
                         <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <span class="btn btn-outline-warning">LIKES {{best}}</span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <span class="btn btn-outline-secondary">UNLIKES {{worst}}</span>
+                        </div>
                     </div>
-                    <div class="card-footer text-muted">
-                        {{postedon|dateCount}} DAYS AGO
-                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="card-footer text-muted">
+                    {{postedon|dateCount}} DAYS AGO
                 </div>
             </div>
         </div>

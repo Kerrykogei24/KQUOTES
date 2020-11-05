@@ -3,10 +3,11 @@
     color: #fff;
 }
 
-h1 {
+.home h1 {
     text-align: center;
     font-family: lekam;
-    color: gold;
+    color: #092C4E;
+    margin-top: 100px;
 }
 
 .home,
