@@ -2,7 +2,7 @@
 ## By Kerry Kogei 
 
 ## Description
-This is a simple Angular  application that allows you to create quotes,upvote, downvote or delete a quote.
+Are you looking for a quote of the week to brighten up your day and your week? Here you can find a list of positive quotes to help you get through a tough week!
 
 ## Live Page 
 
