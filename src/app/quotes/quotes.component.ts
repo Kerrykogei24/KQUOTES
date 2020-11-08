@@ -48,7 +48,7 @@ export class QuotesComponent implements OnInit {
   user: string;
   quote: string;
   worst: number;
-  postedon: any;
+  postedon: Date;
 
   bestQuote() {
     this.best = 0;

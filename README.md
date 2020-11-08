@@ -1,6 +1,15 @@
-# KQuotes
+# Quote
+## By Kerry Kogei 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+## Description
+This is a simple Angular  application that allows you to create quotes,upvote, downvote or delete a quote.
+
+## Live Page 
+
+https://kerrykogei24.github.io/KQUOTES/
+
+## User
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
 ## Development server
 
@@ -14,14 +23,29 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation / Setup instruction
+* Open Terminal {Ctrl+Alt+T}
 
-## Running end-to-end tests
+* git clone ```https://kerrykogei24.github.io/KQUOTES/```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* cd kQuotes
 
-## Further help
+* code . or atom . based on the text editor you have.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies Used
+
+* [HTML5](https://github.com/topics/html5)
+* [CSS](https://github.com/topics/css3)
+* [AngulerCLI]
+* markdown
+* [Bootstrap](https://github.com/topics/bootstrap)
+
+
+## Contact Information 
+
+If you have any question or contributions, please email me at [kerrykomar@gmail.com]
+
+## License
+* *MIT License:*
+* Copyright (c) 2020 **Kerrykogei**
