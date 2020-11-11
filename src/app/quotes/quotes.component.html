@@ -1,6 +1,7 @@
 <div class="container-fluid">
 
     <div class="home">
+        <p>Quote is required</p>
 
         <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#"></a>
@@ -54,7 +55,7 @@
                             </div>
                             <br>
                             <div class="card-footer text-muted">
-                                {{qoute.day|dateCount}} DAYS AGO
+                                {{qoute.day|date|dateAgo}} DAYS AGO
                             </div>
                         </div>
                     </div>
@@ -103,7 +104,7 @@
                             <div class="col-md-2"></div>
                         </div>
                         <div class="card-footer text-muted">
-                            {{postedon|dateCount}} DAYS AGO
+                            {{postedon|date|dateAgo}} DAYS AGO
                         </div>
                     </div>
                 </div>

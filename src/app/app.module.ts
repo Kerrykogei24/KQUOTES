@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import { ContactComponent } from './contact/contact.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
 @NgModule({
@@ -17,12 +19,19 @@ import { ContactComponent } from './contact/contact.component';
     QuoteFormComponent,
     DateCountPipe,
     ContactComponent,
+    DateAgoPipe
+
+    
+   
+  
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+ 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
